@@ -1,85 +1,147 @@
-## 🐈 介绍
+Markdown Resume
+===
+> fork from: [komomoo/vuepress-theme-resume](https://github.com/komomoo/vuepress-theme-resume)
 
-当我们在使用 markdown 书写简历时，都有哪些痛点 🤒？
+- [示例](#示例)
+- [开始](#开始)
+- [简单样式修改](#简单样式修改)
+    - [本地开发](#本地开发)
+    - [其他修改](#其他修改)
+- [打印 / 导出为 PDF](#打印--导出为-pdf)
+- [发布到 github-pages](#发布到-github-pages)
 
-1.  使用编辑器自带的 markdown 预览。缺点：不够精致(丑)emmmm
-2.  使用 Bear (付费)。缺点：导出 pdf 时无法修改参数(默认字体过大/过宽，导致无法压缩成1页)emmmm
 
-在试用了 Mac 上几乎所有的 markdown 软件之后，都不够满意 🤕...
+## 示例
+> [example/dist](https://imhuay.github.io/vuepress-theme-resume/example/dist/)
 
-于是...
+<div align="center">
+  <img src="imgs/my_eg.png" style="width: 600px; height: auto;"/>
+</div>
 
-![](imgs/eg.jpg)
+## 开始
 
-## 🚀 开始
+1. 安装 yarn
+    > https://gist.github.com/imhuay/59b7f2676510b5b18882b5ad31793104#install-nodejs
+    ```bash
+    fnm=1.38.1
+    node=v22.16.0
+    yarn=v1.22.22
+    ```
+2. 安装依赖后运行
+    ```bash
+    cd path/to/vuepress-theme-resume
+    yarn
+    yarn edit
+    ```
+3. 编辑 `example/README.md`, 保存后网页会自动热更新
 
-### 方式一：直接开始
 
-1.  第一步：git clone 或 download 该项目
+## 简单样式修改
+> example/.vuepress/styles/palette.styl
 
-2.  第二步：cd 进入项目目录
-
-> 若环境中不存在 `yarn`/`npm`，则需要先[安装yarn](https://yarnpkg.com/zh-Hans/docs/install)
-
-```bash
-# 安装依赖包
-yarn # 或 npm i
-
-# 开始
-yarn dev # 或 npm run dev
-```
-
-`yarn dev`运行完后，使用浏览器打开提供的网址
-
-3.  第三步：修改 example/README.md，保存后网页将自动热更新
-
-### 方式二：使用主题
-
-```bash
-yarn add -D vuepress-theme-resume # 或使用npm：npm i -D vuepress-theme-resume
-```
-
-```js
-// .vuepress/config.js 中添加
-theme: 'resume',
-```
-
-### 样式覆盖
-
-创建 .vuepress/styles/palette.styl 文件
-
-```css
-/* font */
-$fontSize = 13px
+```styl
+// font
+$fontSize = 12px
 $fontWeight = 400
 
-/* colors */
-$accentColor = #4688F1
-$textColor = #161F28
-$borderColor = #eaecef
+// 完整的设置项见 styles/config.styl
 ```
 
-### 常见问题
+### 本地开发
 
-> 如何导出为 pdf?
+如果有更多修改需求, 可以进行本地开发, 通过修改 `components/Page.vue` 来优化样式
 
-chrome 页面中右键 -> 打印 -> 另存为 pdf。
+```bash
+# 修改 package.json
+# {
+#     "devDependencies": {
+#         "vuepress-theme-resume": "file:./"
+#     }
+# }
 
-注意：打印-更多设置-取消勾选页眉和页脚。否则会有标题和日期。
+# cd path/to/vuepress-theme-resume
+# 注册主题, 使支持实时更新
+yarn link
+# 开发
+yarn dev
+# 此时修改 Page.vue 就可以实时生效了 (需要刷新网页)
+# 注意: 最好只修改格式, 不要编辑简历, 生效会比较慢
 
-> 导出的 pdf 如何控制只有 1 页？
+# 开发完成后重新构建
+yarn clean && yarn # && yarn build
 
-方法一：.vuepress/styles/palette.styl 修改基准字体大小 $fontSize <br>
-方法二：chrome 打印 -> 更多设置 -> 缩放
+# 继续编辑简历
+yarn edit
 
-## 💡 协作
+# 发布 (生成静态页面)
+yarn build
 
-如果你有更好的想法，欢迎 PR 👏
+# 解除链接 (可选, 如果要重新在一个新仓库开发则需要解除)
+yarn unlink
+```
 
-如果它对你有所帮助，可以点一下 <b>⭐️<a href="#">Star</a></b> ~ 😉
+### 其他修改
+1. 隐藏侧边栏
+    > https://github.com/komomoo/vuepress-theme-resume/issues/17
 
-## License
+    在默认打印设置下无影响, 但如果打印时想减小页边距, 则会出现, 所以最好隐藏 (默认打印下的页边距有点宽)
+    
+    方法: 注释掉 `example/.vuepress/config.js` 中的 `themeConfig.sidebar`
+    ```js
+    module.exports = {
+        base: '/vuepress-theme-resume/example/dist/',
+        dest: 'example/dist',
+        theme: 'resume',
+        themeConfig: {
+            // sidebar: [
+            //   {
+            //     collapsable: true,
+            //     children: ['/']
+            //   }
+            // ]
+        }
+    }
+    ```
 
-[MIT](http://opensource.org/licenses/MIT)
+2. 修改字体
 
-Copyright (c) 2018-present, momoko
+    **方法1**) 开发模式下修改 `components/Page.vue`, 支持对不同元素设置不同的字体和字号;
+
+    **方法2**) 通过修改浏览器字体实现 (以 Edge 浏览器为例), 进入 **设置 -> 外观 -> 字体 -> 自定义字体**;  
+      > **注意**: 方法2 仅在 方法1 中的字体不存在时可用;
+
+
+3. 创建自己的简历 (不在 example 上直接修改)
+
+    ```bash
+    cp -r example example-my
+
+    # my-resume/.vuepress/config.js
+    # module.exports = {
+    #     base: '/vuepress-theme-resume/my/dist/',
+    #     dest: 'example-my/dist',
+    #     theme: 'resume',
+    # }
+
+    yarn devm
+    ```
+
+
+## 打印 / 导出为 PDF
+
+右键 -> 打印 -> 另存为 pdf
+
+打印设置
+- 上下边距 3mm, 左右边距 4mm
+- 取消页眉页脚
+
+
+## 发布到 github-pages
+
+```bash
+# build
+yarn build  # 生成 example/dist
+
+# push
+git add "example/dist" && git commit --amend -m "U" && git push -f
+```
