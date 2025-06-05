@@ -122,7 +122,7 @@ export default {
     .right {
       float: right;
       flex: 1;
-      font-size: 0.9em;
+      font-size: 12px;
       text-align: right;
       font-weight: normal;
       font-style: italic;
