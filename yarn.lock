@@ -9516,10 +9516,10 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress-theme-resume@^1.0.1:
+"vuepress-theme-resume@file:.":
   version "1.0.2"
-  resolved "https://registry.npmmirror.com/vuepress-theme-resume/-/vuepress-theme-resume-1.0.2.tgz#b075b7317df6cff5a9a802dc1b907b728b854bbf"
-  integrity sha512-J+hZJRBUnE87MJS9qrNIO4vpQ8EycVCBJriK8+EQSzYo6fbHK8o3Fw121EFBcIVQ4Tq8oQOEk3WZf4f49WgrPw==
+  dependencies:
+    vuepress-theme-resume "file:../../../.cache/yarn/v6/npm-vuepress-theme-resume-1.0.2-b141bd44-7dd9-4aa1-8ed0-c8be8e673fa4-1749158082903/node_modules/vuepress-theme-resume"
 
 vuepress@^1.3.0:
   version "1.9.10"

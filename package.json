@@ -17,17 +17,23 @@
     "resume"
   ],
   "scripts": {
-    "dev": "vuepress dev example",
-    "build": "vuepress build example",
+    "dev": "yarn link 'vuepress-theme-resume' && vuepress dev example",
+    "devm": "yarn link 'vuepress-theme-resume' && vuepress dev example-my",
+    "devl": "yarn link 'vuepress-theme-resume' && vuepress dev",
+    "edit": "vuepress dev example",
+    "clean": "rm -rf node_modules",
+    "build": "rm -rf example/dist && NODE_OPTIONS=--openssl-legacy-provider vuepress build example",
     "release": "sh scripts/release.sh"
   },
   "devDependencies": {
     "standard-version": "^4.4.0",
     "vuepress": "^1.3.0",
-    "vuepress-theme-resume": "^1.0.1"
+    "vuepress-theme-resume": "file:./"
   },
   "engines": {
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "dependencies": {}
 }

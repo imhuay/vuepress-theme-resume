@@ -1,28 +1,107 @@
-// font
-$fontSize = 13px
-$fontWeight = 400
+/* font */
+$textFont = "Consolas", "Cascadia Mono", "Microsoft YaHei", "Noto Sans SC", "PingFang SC"
+$h1Font = "Consolas", "Cascadia Mono", "Microsoft YaHei Light", "DengXian Light", "SimHei", "KaiTi", "PingFang SC"
+$h2Font = "Consolas", "Cascadia Mono", "Microsoft YaHei Light", "PingFang SC"
+$h3Font = "Consolas", "Cascadia Mono", "Microsoft YaHei Light", "PingFang SC"
+$infoFont = $textFont
+$comFont = $textFont
+$roleFont = $textFont
+$tagFont = $textFont
+$rightFont = $textFont
 
-// colors
-// $accentColor = #3eaf7c
+
+/* font-size */
+$fontSize = 12px
+$h1FontSize = 2.3em
+$h2FontSize = 1.45em
+$h3FontSize = 1.25em
+$h3SubFontSize = 1.05em
+$h3ElemFontSizeRatio = 0.9  // info/com/role/tag/right, 最大为 1
+
+$fontWeight = 450
+$lineHeight = 1.6
+$textMaxWidth = 85ch
+
+$h2BorderBottomSize = 2px // 0.18rem
+$h3BorderBottomSize = 1.5px // 0.12rem
+
+
+/* colors */
+$textColor = rgba(0, 0, 0, 0.8)
+$h1Color = rgba(0, 0, 0, 1)
+$h2Color = rgba(0, 0, 0, 0.65)
+$h3Color = rgba(0, 0, 0, 0.9)
+$h3SubColor = rgba(80, 80, 80, 0.9)
+$infoColor = rgba(0, 0, 0, 0.7)
+$comColor = rgba(190, 150, 100, 1)
+$roleColor = rgba(126, 126, 192, 1)
+$tagColor = rgba(57, 167, 207, 1)
+$rightColor = rgba(0, 0, 0, 0.6)
+
+$h2BorderColor = rgba(211, 211, 211, 1)
+$h3BorderColor = rgba(234, 236, 239, 1)
+
 $accentColor = #4688F1
-// $textColor = #2c3e50
-$textColor = #161F28
-$borderColor = #eaecef
 $codeBgColor = #282c34
 $arrowBgColor = #ccc
 
-// layout
+
+/* margin */
+$h2MarginTop = 0.8em
+$h2MarginBottom = 0.6em
+
+$h3MarginTop = 0.8em            // 项目(非第一个)与上一个分割线之间的间距
+$h3MarginBottom = 0.4em         // 项目与详情之间的间距
+$h3SubMarginTop = 0.6em         // 子项目与上一个子项目之间的间距
+$h3SubMarginTopFirst = 0.4em    // 主项目与子项目之间的间距
+$hrMarginTop = 0.5em            // 详情与下一个分割线之间的间距
+
+$topUlMarginLeft = 0.45em     // 顶层无序列表缩进
+$topOlMarginLeft = 0.95em     // 顶层有序列表缩进
+$ulMarginLeft = 0.1em         // 无序项目缩进
+$olMarginLeft = 0.5em         // 有序项目缩进
+$h3SubTextIndent = 0.2em      // 子项目标题缩进
+
+$pageSize = A4                      // 纸张大小
+$pageMargin = 10mm 3mm 10mm 3mm     // 页边距: 上 右 下 左 (顺时针)
+$firstPageMarginTop = 3mm           // 首页上边距
+
+
+/* hr_sub */
+$subHrMarginL = 10px
+$subHrMarginR = 10px
+$subHrBorder = 1px dashed rgba(234, 236, 239, 1)
+
+
+/* center char */
+$centerColor = rgba(126, 61, 61, 1)
+$centerFontSize = 0.5em
+$centerLetterSpacing = 5em      // 字符间距
+$centerTranslateX = -0em        // 整体左右偏移
+$centerTranslateY = -0em        // 整体上下偏移
+
+
+/* head3-container */
+$titleMaxWidth = 9.5rem  // 项目标题最大宽度
+$comMaxWidth = 4.3rem;   // 公司最大宽度
+$roleMaxWidth = 5.5rem;  // 角色最大宽度
+
+
+/* layout */
 $navbarHeight = 3.6rem
 $sidebarWidth = 20rem
-$contentWidth = 740px
+$contentWidth = 760px
 
-// responsive breakpoints
+
+/* responsive breakpoints */
 $MQNarrow = 959px
 $MQMobile = 719px
 $MQMobileNarrow = 419px
 
-// code
+
+/* code */
 $lineNumbersWrapperWidth = 3.5rem
+
 
 @require './palette'
 @import '~@temp/palette.styl' // generated from user config
