@@ -1,85 +1,76 @@
-## 🐈 介绍
+vuepress-theme-resume
+===
+> fork from: [komomoo/vuepress-theme-resume](https://github.com/komomoo/vuepress-theme-resume)
 
-当我们在使用 markdown 书写简历时，都有哪些痛点 🤒？
+- [Start](#start)
+- [打印 / 导出为 PDF](#打印--导出为-pdf)
+- [样式修改](#样式修改)
+- [我的修改](#我的修改)
 
-1.  使用编辑器自带的 markdown 预览。缺点：不够精致(丑)emmmm
-2.  使用 Bear (付费)。缺点：导出 pdf 时无法修改参数(默认字体过大/过宽，导致无法压缩成1页)emmmm
 
-在试用了 Mac 上几乎所有的 markdown 软件之后，都不够满意 🤕...
+## Start
 
-于是...
+1. 安装 yarn
+    > https://gist.github.com/imhuay/59b7f2676510b5b18882b5ad31793104#install-nodejs
+2. 安装依赖包
+    ```bash
+    cd path/to/vuepress-theme-resume
+    yarn
+    ```
+3. 启动
+    ```bash
+    yarn dev
+    ```
 
-![](imgs/eg.jpg)
 
-## 🚀 开始
+## 打印 / 导出为 PDF
 
-### 方式一：直接开始
+右键 -> 打印 -> 另存为 pdf
 
-1.  第一步：git clone 或 download 该项目
+打印设置
+- 上下边距 3mm, 左右边距 4mm
+- 取消页眉页脚
 
-2.  第二步：cd 进入项目目录
+## 样式修改
+> example/.vuepress/styles/palette.styl
 
-> 若环境中不存在 `yarn`/`npm`，则需要先[安装yarn](https://yarnpkg.com/zh-Hans/docs/install)
-
-```bash
-# 安装依赖包
-yarn # 或 npm i
-
-# 开始
-yarn dev # 或 npm run dev
-```
-
-`yarn dev`运行完后，使用浏览器打开提供的网址
-
-3.  第三步：修改 example/README.md，保存后网页将自动热更新
-
-### 方式二：使用主题
-
-```bash
-yarn add -D vuepress-theme-resume # 或使用npm：npm i -D vuepress-theme-resume
-```
-
-```js
-// .vuepress/config.js 中添加
-theme: 'resume',
-```
-
-### 样式覆盖
-
-创建 .vuepress/styles/palette.styl 文件
-
-```css
-/* font */
+```styl
+// font
 $fontSize = 13px
 $fontWeight = 400
 
-/* colors */
+// colors
 $accentColor = #4688F1
 $textColor = #161F28
 $borderColor = #eaecef
 ```
 
-### 常见问题
 
-> 如何导出为 pdf?
+## 我的修改
+1. 隐藏侧边栏
+    > https://github.com/komomoo/vuepress-theme-resume/issues/17
 
-chrome 页面中右键 -> 打印 -> 另存为 pdf。
+    在默认打印设置下无影响, 但如果打印时想减小页边距, 则会出现, 所以最好隐藏 (默认打印下的页边距有点宽)
+    
+    方法: 注释掉 `example/.vuepress/config.js` 中的 `themeConfig.sidebar`
+    ```js
+    module.exports = {
+        base: '/vuepress-theme-resume/example/dist/',
+        dest: 'example/dist',
+        theme: 'resume',
+        themeConfig: {
+            // sidebar: [
+            //   {
+            //     collapsable: true,
+            //     children: ['/']
+            //   }
+            // ]
+        }
+    }
+    ```
 
-注意：打印-更多设置-取消勾选页眉和页脚。否则会有标题和日期。
+2. 修改字体
 
-> 导出的 pdf 如何控制只有 1 页？
+    通过修改浏览器字体实现, 以 Edge 浏览器为例, 进入 设置 | 外观 | 字体 | 自定义字体, 推荐等宽字体, 我使用的是 `Cascadia Mono`.
 
-方法一：.vuepress/styles/palette.styl 修改基准字体大小 $fontSize <br>
-方法二：chrome 打印 -> 更多设置 -> 缩放
-
-## 💡 协作
-
-如果你有更好的想法，欢迎 PR 👏
-
-如果它对你有所帮助，可以点一下 <b>⭐️<a href="#">Star</a></b> ~ 😉
-
-## License
-
-[MIT](http://opensource.org/licenses/MIT)
-
-Copyright (c) 2018-present, momoko
+    修改浏览器字体对大多数网页没有影响, 一般网页都会使用自己定义的字体

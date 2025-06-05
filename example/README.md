@@ -1,70 +1,75 @@
 <h1>
-  <span>姓名</span>
+  <span>imhuay</span>
   <ul>
-    <li><span>电话</span>xxx xxxx xxxx</li>
-    <li><span>微信</span>xxxxxxxxxxx</li>
-    <li><span>邮箱</span><a href="mailto:ko.momo@qq.com">ko.momo@qq.com</a></li>
-    <li><span>Github</span><a>github.com/komomoo</a></li>
+    <li><span>Phone</span>xxx xxxx xxxx</li>
+    <li><span>Email</span><a href="mailto:ko.momo@qq.com">imhuay@xxx.com</a></li>
+    <li><span>Github</span><a href="https://github.com/imhuay">github.com/imhuay</a></li>
   </ul>
 </h1>
 
-## 教育经历
+## Education
 
-硕士 xxxxxxxx大学 软件工程 <span class="right">2014.09 - 2017.06</span><br>
-本科 xxxxxxxxxxxx大学 电子信息工程 <span class="right">2010.09 - 2014.06</span>
+硕士 / xxxxxxxx 大学 / 计算机技术 <span class="right">2016.09 ~ 2019.01</span><br>
+本科 / xxxxxxxx 大学 / 计算机科学与技术 <span class="right">2012.09 ~ 2016.07</span>
 
-## 工作经历
+## Companies
 
-xxxxxxxxxxxx公司(初创)-xxxxx部门 xxxxxxx岗位<span class="right">2016.07 - 至今</span><br>
-xxxxxxxxxxxx公司(上市)-xxxxxxxxx部门 xxxxxxx岗位<span class="right">2014.07 - 2016.07</span>
+B 公司 / xxx 部门 / xxx 岗位<span class="right">2022.06 ~ present</span><br>
+A 公司 / xxx 部门 / xxx 岗位<span class="right">2019.01 ~ 2022.06</span>
 
-- 获得荣誉：**xxxxxxxxxxxxxxxxxxxxxx**
+## Projects
 
-## 项目经验
+### 项目一 <span class="role">&nbsp;/&nbsp;Owner</span><span class="right">2018.01 ~ present</span>
 
-### 项目一名称<span class="role">:&nbsp;职责</span><span class="right">2018.01 - 至今</span>
-
-- 技术栈：**XXX Xxxx**
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
+- 背景: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- 职责: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    - AAA: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    - BBB: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- 结果: 1) xxx; 2) xxx; 3) xxx
 
 ---
 
-### 项目二名称<span class="role">:&nbsp;核心开发者</span><span class="right">2017.01 - 2018.01</span>
+### 项目二 <span class="role">&nbsp;/&nbsp;Main Developer</span><span class="right">2017.01 ~ 2018.01</span>
 
-- 技术栈：**XXX Xxxx + Xxx Xxxxxx + Xxxxxx**
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
-
----
-
-### 项目三名称<span class="role">:&nbsp;项目负责人</span><span class="right">2016.01 - 2017.01</span>
-
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
+- 背景: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- 职责: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    - AAA: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    - BBB: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- 结果: 1) xxx; 2) xxx; 3) xxx
 
 ---
 
-### 项目四名称<span class="role">:&nbsp;项目维护</span><span class="right">2015.01 - 2016.01</span>
+### 项目三 <span class="role">&nbsp;/&nbsp;Developer</span><span class="right">2016.01 ~ 2017.01</span>
 
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX。
+- 背景: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- 职责: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    - AAA: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    - BBB: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- 结果: 1) xxx; 2) xxx; 3) xxx
 
-## 技能描述
+---
 
-- 了解 XXXXXXXXXXXXXXXXXXX，**掌握 XXXXXXXXXXXXX**
-- 熟悉 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-- 了解 XXXXX，XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-- 掌握 XXXXXXXXXX，XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-- XXXXXXXXXXXXXXXXXXXX，XXXXXXXXXXXXX
+### 项目四 <span class="role">&nbsp;/&nbsp;Member</span><span class="right">2015.01 ~ 2016.01</span>
 
-## 自我评价
+- 背景: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- 职责: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    - AAA: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    - BBB: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- 结果: 1) xxx; 2) xxx; 3) xxx
 
-- XXXXXXXXXXXXXXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+## Github
+
+### [aaa](https://) <span class="role">&nbsp;/&nbsp;Owner</span><span class="right">2015.01 ~ 2016.01</span>
+
+### [bbb](https://) <span class="role">&nbsp;/&nbsp;Main Contributor</span><span class="right">2017.01 ~ 2018.01</span>
+
+## Skills
+
+- Python / PyTorch <span class="right">● ● ● ● ●</span>
+- PySpark / Keras / Hive / Git <span class="right">● ● ● ●</span>
+- Java / C++ / Linux / Scikit-Learn / English(CET6) <span class="right">● ● ●</span>
+
+## Self-evaluation
+
+- xxxxxxxxxxxxxxxxx
+- xxxxxxxxxxxxxxxxxxxxxxxxx
