@@ -1,28 +1,71 @@
 // font
+$textFont = "Cascadia Mono", "Noto Sans SC", "PingFang SC"
+$h1Font = "Cascadia Mono", "Microsoft YaHei Light", "DengXian Light", "SimHei", "KaiTi", "PingFang SC"
+$h2Font = "Cascadia Mono", "Microsoft YaHei Light", "PingFang SC"
+$h3Font = "Cascadia Mono", "Microsoft YaHei Light", "PingFang SC"
+$infoFont = $textFont
+$roleFont = $textFont
+$tagFont = $textFont
+$rightFont = $textFont
+
+
+// font-size
 $fontSize = 13px
+$h1FontSize = 2.3em
+$h2FontSize = 1.4em
+$h3FontSize = 1.1em
+$h3ElemFontSizeRatio = 0.9  // info/role/tag/right
+
 $fontWeight = 400
 
+
 // colors
-// $accentColor = #3eaf7c
+$textColor = rgba(0, 0, 0, 0.8)
+$h1Color = rgba(0, 0, 0, 1)
+$h2Color = rgba(0, 0, 0, 1)
+$h3Color = rgba(0, 0, 0, 0.75)
+$infoColor = rgba(0, 0, 0, 0.8)
+$roleColor = rgba(126, 126, 192, 1)
+$tagColor = rgba(57, 167, 207, 1)
+$rightColor = rgba(0, 0, 0, 0.6)
+
+$h2BorderColor = rgba(211, 211, 211, 1)
+$h3BorderColor = rgba(234, 236, 239, 1)
+
 $accentColor = #4688F1
-// $textColor = #2c3e50
-$textColor = #161F28
-$borderColor = #eaecef
 $codeBgColor = #282c34
 $arrowBgColor = #ccc
+
+
+// margin-top-bottom
+$h2MarginTop = 0.8em
+$h2MarginBottom = 0.6em
+$h2HasH3MarginBottom = 0.8em
+
+$h3MarginTop = 0.6em
+$h3MarginBottom = 0.4em
+
+
+// head3-container
+$titleMaxWidth = 8.5rem
+$roleMaxWidth = 5.5rem;
+
 
 // layout
 $navbarHeight = 3.6rem
 $sidebarWidth = 20rem
-$contentWidth = 740px
+$contentWidth = 760px
+
 
 // responsive breakpoints
 $MQNarrow = 959px
 $MQMobile = 719px
 $MQMobileNarrow = 419px
 
+
 // code
 $lineNumbersWrapperWidth = 3.5rem
+
 
 @require './palette'
 @import '~@temp/palette.styl' // generated from user config

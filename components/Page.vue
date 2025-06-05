@@ -17,7 +17,8 @@ export default {
 .page {
   .content {
     font-size: $fontSize;
-    font-family: menlo, pingfang;
+    // font-family: "Cascadia Mono", "Noto Sans SC", "PingFang SC";
+    font-family: $textFont;
     font-weight: $fontWeight;
     color: $textColor;
 
@@ -25,19 +26,25 @@ export default {
       margin: 0 !important;
     }
 
-    > h1 {
+    h1 {
       display: flex;
       align-items: center;
+      font-family: $h1Font;
+      font-size: $h1FontSize;
+      color: $h1Color;
 
       > span {
         flex: 1;
+        letter-spacing: 0.2em;
         transform: translateY(-0.2em);
       }
 
       > ul {
         float: right;
-        font-size: 12px;
+        font-family: $infoFont;
+        font-size: $fontSize * $h3ElemFontSizeRatio !important;
         font-weight: normal;
+        color: $infoColor;
         margin: 0;
         padding: 0;
 
@@ -59,40 +66,49 @@ export default {
       }
     }
 
-    > h2, > h3 {
+    h2, h3 {
       line-height: 1;
       border: 0;
       padding: 0;
       display: flex;
       align-items: baseline;
-      margin-bottom: 0.6em !important;
 
       .header-anchor {
         display: none;
       }
     }
 
-    > h2 {
-      font-size: 1.35em;
+    h2 {
+      font-family: $h2Font;
+      font-size: $h2FontSize;
+      color: $h2Color
       display: flex;
+      margin-bottom: $h2MarginBottom !important;
 
       &:not(:first-of-type) {
-        margin-top: 1em !important;
+        margin-top: $h2MarginTop !important;
       }
 
       &::after {
         content: '';
         flex: 1;
-        border-bottom: 2px dashed #D3D3D3;
+        border-bottom: 2px dashed $h2BorderColor;
         margin-left: 10px;
       }
     }
 
-    > h3 {
-      font-size: 1.1em;
+    h2:has(+ h3) {
+      margin-bottom: $h2HasH3MarginBottom !important;
+    }
+
+    h3 {
+      font-family: $h3Font;
+      font-size: $h3FontSize;
+      color: $h3Color
+      margin-bottom: $h3MarginBottom !important;
 
       &:not(:first-of-type) {
-        margin-top: 0.6em !important;
+        margin-top: $h3MarginTop !important;
       }
     }
 
@@ -109,23 +125,63 @@ export default {
     }
 
     > hr {
-      margin-top: 0.4em !important;
-      border-top: 1px dashed $borderColor;
+      margin-top: $h3MarginBottom !important;
+      border-top: 1px dashed $h3BorderColor;
+    }
+
+    /* 不对齐方案 */
+    .role, .tag, .right {
+      font-weight: normal;
+      transform: translateY(-0.04em); // 微调垂直位置（正值下移，负值上移）
     }
 
     .role {
-      flex: 1;
-      font-size: 12px;
-      text-align: left;
+      font-family: $roleFont;
+      font-size: $fontSize * $h3ElemFontSizeRatio !important;
+      color: $roleColor;
+    }
+
+    .tag {
+      font-family: $tagFont;
+      font-size: $fontSize * $h3ElemFontSizeRatio !important;
+      color: $tagColor;
     }
 
     .right {
-      float: right;
+      font-family: $rightFont;
       flex: 1;
-      font-size: 0.9em;
+      float: right;
+      font-size: $fontSize * $h3ElemFontSizeRatio !important;
+      color: $rightColor;
       text-align: right;
-      font-weight: normal;
       font-style: italic;
+    }
+
+    .head3-container {
+      display: flex;
+      align-items: baseline;
+
+      &:not(:first-of-type) {
+        margin-top: $h3MarginTop !important;
+      }
+
+      h3 {
+        flex: 1;
+        max-width: $titleMaxWidth;
+      }
+
+      .role {
+        flex: 1;
+        max-width: $roleMaxWidth;
+      }
+
+      .tag {
+        flex: 1;
+      }
+
+      .right {
+        flex: 1;
+      }
     }
   }
 }
